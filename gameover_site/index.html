@@ -1,11 +1,10 @@
+<!-- Full updated HTML below with images and PKR prices -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GAME OVER</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -14,150 +13,151 @@
             background-color: #0e0e0e;
             color: #f0f0f0;
         }
-
         header {
             background: linear-gradient(90deg, #001f3f, #004080);
             padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
-
         .logo {
             font-size: 2.5em;
-            font-weight: bold;
             color: #00eaff;
-            letter-spacing: 2px;
         }
-
         marquee {
             color: #ffffff;
             font-size: 1em;
             margin-top: 5px;
         }
-
         main {
             display: flex;
-            min-height: 80vh;
-            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
         }
-
         .sidebar {
             width: 220px;
             background-color: #141414;
             padding: 25px;
             border-right: 2px solid #222;
-            display: flex;
-            flex-direction: column;
         }
-
         .sidebar button {
             background: #00264d;
-            color: #ffffff;
+            color: white;
             border: none;
             padding: 12px;
             margin-bottom: 15px;
-            font-size: 1em;
             border-radius: 8px;
-            transition: background 0.3s ease;
             cursor: pointer;
         }
-
-        .sidebar button:hover {
-            background: #0059b3;
-        }
-
         .content {
             flex-grow: 1;
             padding: 30px;
-            animation: fadeIn 1s ease-in;
         }
-
         .about {
-            margin-bottom: 40px;
             background-color: #1f1f1f;
             padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
         }
-
-        .about h2 {
-            color: #00eaff;
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
         }
-
         .catalog-item {
             background: #262626;
-            margin-bottom: 20px;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-
+        .catalog-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
         .catalog-item h3 {
-            margin: 0 0 10px;
             color: #00eaff;
+            font-size: 1.1em;
         }
-
-        .price-line {
-            color: red;
-            text-decoration: line-through;
+        .catalog-item p {
+            margin: 5px 0;
+            font-size: 0.95em;
         }
-
-        .discount {
+        .price {
             color: #00ff99;
             font-weight: bold;
-            margin-left: 10px;
         }
-
         footer {
             background: #001f3f;
             text-align: center;
             padding: 25px;
             color: #ffffff;
-            font-size: 0.9em;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">🎮 GAME OVER</div>
-        <marquee behavior="scroll" direction="left">We are not gone, we're just leveling up! 💙</marquee>
-    </header>
-
-    <main>
-        <aside class="sidebar">
-            <button onclick="showCatalog('playstation')">🎮 PlayStation</button>
-            <button onclick="showCatalog('xbox')">🟩 Xbox</button>
-            <button onclick="showCatalog('giftcards')">🎁 Gift Cards</button>
-            <button onclick="showCatalog('gamepasses')">🕹️ Game Passes</button>
-            <button onclick="showCatalog('zeebundle')">📺 Zee Bundle</button>
-        </aside>
-
-        <section class="content">
-            <div class="about">
-                <h2>About Us</h2>
-                <p>Welcome to <strong>GAME OVER</strong> — your ultimate online destination for premium games, consoles, and digital bundles! 🎮💥<br><br>
-
-                We’re not just a store; we’re a community of gamers dedicated to bringing you the best deals, the hottest titles, and the most epic bundles out there. Whether you’re a PlayStation warrior, an Xbox champion, a PC strategist, or just someone who loves great gaming value — we’ve got something for you.<br><br>
-
-                Our mission is simple: make gaming more accessible, affordable, and exciting for everyone. That means trusted digital products, 24/7 support, blazing-fast delivery, and unbeatable prices — all under one roof.<br><br>
-
-                At GAME OVER, we believe the game never really ends — it just gets better. So power up, gear up, and dive into the world of endless play. Because here... it's never really GAME OVER. 💙</p>
-            </div>
-            <div id="catalog"></div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>📍 Visit Our Office</p>
-            <p>📞 Contact Us: gameover@example.com</p>
-            <p>📌 Location: Gaming Street, Game City</p>
+<header>
+    <div class="logo">🎮 GAME OVER</div>
+    <marquee>Level Up with the Best Digital Deals — Valid Till 2 July 🕹️🔥</marquee>
+</header>
+<main>
+    <aside class="sidebar">
+        <button>🎮 PlayStation</button>
+        <button>🟩 Xbox</button>
+        <button>🎁 Gift Cards</button>
+        <button>🕹️ Game Passes</button>
+        <button>📺 Zee Bundle</button>
+    </aside>
+    <section class="content">
+        <div class="about">
+            <h2>About Us</h2>
+            <p>Welcome to <strong>GAME OVER</strong> — your ultimate digital marketplace for PlayStation and Xbox games. We offer authentic, affordable game keys and digital bundles straight to your console. 🎮💥<br><br>
+            Trusted by hundreds of gamers. Powered by passion. It's never really GAME OVER.</p>
         </div>
-    </footer>
+
+        <div class="catalog-grid">
+            <div class="catalog-item">
+                <img src="https://i.imgur.com/Z4ErSVT.jpg" alt="Hogwarts Legacy">
+                <h3>Hogwarts Legacy</h3>
+                <p class="price">PKR 4950</p>
+            </div>
+            <div class="catalog-item">
+                <img src="https://i.imgur.com/qTRo1EY.jpg" alt="Resident Evil 4">
+                <h3>Resident Evil 4</h3>
+                <p class="price">PKR 5200</p>
+            </div>
+            <div class="catalog-item">
+                <img src="https://i.imgur.com/yrM3BFZ.jpg" alt="Resident Evil Village">
+                <h3>Resident Evil Village</h3>
+                <p class="price">PKR 3950</p>
+            </div>
+            <div class="catalog-item">
+                <img src="https://i.imgur.com/xqu4JS9.jpg" alt="Resident Evil Triple Pack">
+                <h3>Resident Evil Triple Pack</h3>
+                <p class="price">PKR 4050</p>
+            </div>
+            <div class="catalog-item">
+                <img src="https://i.imgur.com/UxnUv7H.jpg" alt="The Witcher 3">
+                <h3>The Witcher 3</h3>
+                <p class="price">PKR 2450</p>
+            </div>
+            <div class="catalog-item">
+                <img src="https://i.imgur.com/ALSl1cd.jpg" alt="Batman Arkham Knight">
+                <h3>Batman: Arkham Knight</h3>
+                <p class="price">PKR 1500</p>
+            </div>
+            <div class="catalog-item">
+                <img src="https://i.imgur.com/NnRbjix.jpg" alt="Tekken 7">
+                <h3>Tekken 7</h3>
+                <p class="price">PKR 2500</p>
+            </div>
+            <div class="catalog-item">
+                <img src="https://i.imgur.com/3s0sEMa.jpg" alt="Tekken 7: Definitive Edition">
+                <h3>Tekken 7: Definitive</h3>
+                <p class="price">PKR 4500</p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>📞 Contact: +92322 400990  | 📸 Instagram: @gameover_14</p>
+</footer>
 </body>
 </html>
