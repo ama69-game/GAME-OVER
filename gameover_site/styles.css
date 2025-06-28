@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+}
+
+header {
+    background-color: #001f3f;
+    padding: 10px 20px;
+    text-align: center;
+    color: #00aced;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+marquee {
+    color: #ffffff;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+main {
+    display: flex;
+    min-height: 80vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #111;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar button {
+    background: #004080;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar button:hover {
+    background: #0074d9;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.about {
+    margin-bottom: 20px;
+}
+
+.catalog-item {
+    background: #222;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+.catalog-item h3 {
+    margin: 0;
+    color: #00aced;
+}
+
+.price-line {
+    color: red;
+    text-decoration: line-through;
+}
+
+.discount {
+    color: #0f0;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #001f3f;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+}
