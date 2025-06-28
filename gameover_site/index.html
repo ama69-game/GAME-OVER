@@ -92,6 +92,18 @@
       padding: 25px;
       color: #ffffff;
     }
+    .slideshow-container {
+     position: relative;
+     max-width: 100%;
+     margin-bottom: 40px;
+   }
+   .slide {
+    display: none;
+    text-align: center;
+   }
+   .slide.active {
+    display: block;
+     }
   </style>
   <script>
     function showSection(sectionId) {
@@ -122,8 +134,9 @@
     </div>
 
     <!-- Slideshow Style Front Page -->
-    <div class="catalog-grid dynamic-section" id="slideshow">
-      <div class="catalog-item">
+   <div class="slideshow-container dynamic-section" id="slideshow">
+     <div class="slide active">
+        <div class="catalog-item">
         <img src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70010000014724/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2" alt="Hogwarts Legacy">
         <h3>Hogwarts Legacy</h3>
         <p><span class="original-price">PKR 5450</span><span class="discount-price">4950</span></p>
@@ -200,5 +213,21 @@
 <footer>
   <p>📞 Contact: +92322 400990 | 📸 Instagram: @gameover_14</p>
 </footer>
+  <script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlides() {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+    });
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1;
+    slides[slideIndex - 1].classList.add('active');
+    setTimeout(showSlides, 3000); // Change every 3 seconds
+  }
+
+  showSlides();
+</script>
 </body>
 </html>
