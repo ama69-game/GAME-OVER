@@ -1,164 +1,204 @@
-<!-- Full updated HTML below with images and PKR prices -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GAME OVER</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Orbitron', sans-serif;
-            background-color: #0e0e0e;
-            color: #f0f0f0;
-        }
-        header {
-            background: linear-gradient(90deg, #001f3f, #004080);
-            padding: 20px;
-            text-align: center;
-        }
-        .logo {
-            font-size: 2.5em;
-            color: #00eaff;
-        }
-        marquee {
-            color: #ffffff;
-            font-size: 1em;
-            margin-top: 5px;
-        }
-        main {
-            display: flex;
-        }
-        .sidebar {
-            width: 220px;
-            background-color: #141414;
-            padding: 25px;
-            border-right: 2px solid #222;
-        }
-        .sidebar button {
-            background: #00264d;
-            color: white;
-            border: none;
-            padding: 12px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .content {
-            flex-grow: 1;
-            padding: 30px;
-        }
-        .about {
-            background-color: #1f1f1f;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        .catalog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-        .catalog-item {
-            background: #262626;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        .catalog-item img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-        .catalog-item h3 {
-            color: #00eaff;
-            font-size: 1.1em;
-        }
-        .catalog-item p {
-            margin: 5px 0;
-            font-size: 0.95em;
-        }
-        .price {
-            color: #00ff99;
-            font-weight: bold;
-        }
-        footer {
-            background: #001f3f;
-            text-align: center;
-            padding: 25px;
-            color: #ffffff;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAME OVER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+    }
+    header {
+      background: linear-gradient(90deg, #001f3f, #004080);
+      padding: 20px;
+      text-align: center;
+    }
+    .logo img {
+      height: 80px;
+    }
+    marquee {
+      color: #ffffff;
+      font-size: 1em;
+      margin-top: 5px;
+    }
+    main {
+      display: flex;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #141414;
+      padding: 25px;
+      border-right: 2px solid #222;
+    }
+    .sidebar button {
+      background: #00264d;
+      color: white;
+      border: none;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 30px;
+    }
+    .about {
+      background-color: #1f1f1f;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .catalog-item {
+      background: #262626;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .catalog-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .catalog-item h3 {
+      color: #00eaff;
+      font-size: 1.1em;
+    }
+    .catalog-item .original-price {
+      text-decoration: line-through;
+      color: #ff5e5e;
+    }
+    .catalog-item .discount-price {
+      color: #00ff99;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    .hidden-section {
+      display: none;
+    }
+    footer {
+      background: #001f3f;
+      text-align: center;
+      padding: 25px;
+      color: #ffffff;
+    }
+  </style>
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.dynamic-section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
 </head>
 <body>
 <header>
-   <div class="logo"><img src="https://media.istockphoto.com/id/1325433246/video/game-over-text-animation-with-alpha-channel-4k.jpg?s=640x640&k=20&c=aZM_cNmjuXVVkLm12evzXTU0qFhAu3Vh2_2W_h-eq3c=" alt="Game Over Logo" style="height: 80px;"></div>
-    <marquee>Level Up with the Best Digital Deals — Valid Till 2 July 🕹️🔥</marquee>
+  <div class="logo"><img src="https://media.istockphoto.com/id/1325433246/video/game-over-text-animation-with-alpha-channel-4k.jpg?s=640x640&k=20&c=aZM_cNmjuXVVkLm12evzXTU0qFhAu3Vh2_2W_h-eq3c=" alt="Game Over Logo"></div>
+  <marquee>Level Up with the Best Digital Deals — Valid Till 2 July 🕹️🔥</marquee>
 </header>
 <main>
-    <aside class="sidebar">
-        <button>🎮 PlayStation</button>
-        <button>🟩 Xbox</button>
-        <button>🎁 Gift Cards</button>
-        <button>🕹️ Game Passes</button>
-        <button>📺 Zee Bundle</button>
-    </aside>
-    <section class="content">
-        <div class="about">
-            <h2>About Us</h2>
-            <p>Welcome to <strong>GAME OVER</strong> — your ultimate digital marketplace for PlayStation and Xbox games. We offer authentic, affordable game keys and digital bundles straight to your console. 🎮💥<br><br>
-            Trusted by hundreds of gamers. Powered by passion. It's really never GAME OVER.</p>
-        </div>
-        
-        <div class="catalog-grid">
-            <div class="catalog-item">
-                <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/01/grand-theft-auto-5-feature.jpg" alt="Hogwarts Legacy">
-                <h3>Grand Theft Auto 5</h3>
-                <p class="price">PKR 3000</p>
-            </div>
-        <div class="catalog-grid">
-            <div class="catalog-item">
-                <img src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_1200/ncom/software/switch/70010000014724/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2" alt="Hogwarts Legacy">
-                <h3>Hogwarts Legacy</h3>
-                <p class="price">PKR 4950</p>
-            </div>
-            <div class="catalog-item">
-                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202210/0712/BiS5QP6h4506JHyJlZlVzK9D.jpg" alt="Resident Evil 4">
-                <h3>Resident Evil 4</h3>
-                <p class="price">PKR 5200</p>
-            </div>
-            <div class="catalog-item">
-                <img src="https://i.ebayimg.com/00/s/OTQwWDE2MDA=/z/W34AAOSwlt1kmInx/$_57.JPG?set_id=880000500F" alt="Resident Evil Village">
-                <h3>Resident Evil Village</h3>
-                <p class="price">PKR 3950</p>
-            </div>
-            <div class="catalog-item">
-                <img src="https://cdn.wccftech.com/wp-content/uploads/2021/10/witcher-3-ps5-xsx-next-gen-2.jpg" alt="The Witcher 3">
-                <h3>The Witcher 3</h3>
-                <p class="price">PKR 2450</p>
-            </div>
-            <div class="catalog-item">
-                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202306/0915/33a2bc694cae0b6ea1210602a36360427af8486f3b10c0d4.jpg" alt="Batman Arkham Knight">
-                <h3>Batman: Arkham Knight</h3>
-                <p class="price">PKR 1500</p>
-            </div>
-            <div class="catalog-item">
-                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202111/0907/nnsJwx47UkQyMSqOHIkBCQIm.jpg" alt="Tekken 7">
-                <h3>Tekken 7</h3>
-                <p class="price">PKR 2500</p>
-            </div>
-            <div class="catalog-item">
-                <img src="https://p325k7wa.twic.pics/high/tekken/tekken-7/04-retailers/t7-definitive-edition.jpg?twic=v1/resize=760/step=10/quality=80" alt="Tekken 7: Definitive Edition">
-                <h3>Tekken 7: Definitive</h3>
-                <p class="price">PKR 4500</p>
-            </div>
-        </div>
-    </section>
+  <aside class="sidebar">
+    <button onclick="showSection('playstation')">🎮 PlayStation</button>
+    <button onclick="showSection('xbox')">🟩 Xbox</button>
+    <button onclick="showSection('giftcards')">🎁 Gift Cards</button>
+    <button onclick="showSection('gamepasses')">🕹️ Game Passes</button>
+    <button onclick="showSection('zee')">📺 Zee Bundle</button>
+  </aside>
+  <section class="content">
+    <div class="about">
+      <h2>About Us</h2>
+      <p>Welcome to <strong>GAME OVER</strong> — your ultimate digital marketplace for PlayStation and Xbox games. We offer authentic, affordable game keys and digital bundles straight to your console. 🎮💥<br><br>
+      Trusted by hundreds of gamers. Powered by passion. It's never really GAME OVER.</p>
+    </div>
+
+    <!-- Slideshow Style Front Page -->
+    <div class="catalog-grid dynamic-section" id="slideshow">
+      <div class="catalog-item">
+        <img src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70010000014724/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2" alt="Hogwarts Legacy">
+        <h3>Hogwarts Legacy</h3>
+        <p><span class="original-price">PKR 5450</span><span class="discount-price">4950</span></p>
+      </div>
+      <div class="catalog-item">
+        <img src="https://d1w82usnq70pt2.cloudfront.net/wp-content/uploads/2023/05/fe7f67dc-944e-4ed1-9afa-5da3f6bfaf97-696x392.jpeg" alt="Resident Evil 4">
+        <h3>Resident Evil 4</h3>
+        <p><span class="original-price">PKR 5800</span><span class="discount-price">5200</span></p>
+      </div>
+      <div class="catalog-item">
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/05/resident-evil-village-1.jpg" alt="Resident Evil Village">
+        <h3>Resident Evil Village</h3>
+        <p><span class="original-price">PKR 4350</span><span class="discount-price">3950</span></p>
+      </div>
+      <div class="catalog-item">
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/01/grand-theft-auto-5-feature.jpg" alt="Grand Theft Auto 5">
+        <h3>Grand Theft Auto 5</h3>
+        <p><span class="original-price">PKR 4550</span><span class="discount-price">3000</span></p>
+      </div>
+    </div>
+
+    <!-- PlayStation Section -->
+    <div class="catalog-grid dynamic-section" id="playstation" style="display: none;">
+      <!-- Same games duplicated for PlayStation section -->
+      <div class="catalog-item">
+        <img src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70010000014724/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2" alt="Hogwarts Legacy">
+        <h3>Hogwarts Legacy</h3>
+        <p><span class="original-price">PKR 5450</span><span class="discount-price">4950</span></p>
+      </div>
+      <div class="catalog-item">
+        <img src="https://d1w82usnq70pt2.cloudfront.net/wp-content/uploads/2023/05/fe7f67dc-944e-4ed1-9afa-5da3f6bfaf97-696x392.jpeg" alt="Resident Evil 4">
+        <h3>Resident Evil 4</h3>
+        <p><span class="original-price">PKR 5800</span><span class="discount-price">5200</span></p>
+      </div>
+      <div class="catalog-item">
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/05/resident-evil-village-1.jpg" alt="Resident Evil Village">
+        <h3>Resident Evil Village</h3>
+        <p><span class="original-price">PKR 4350</span><span class="discount-price">3950</span></p>
+      </div>
+      <div class="catalog-item">
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/01/grand-theft-auto-5-feature.jpg" alt="Grand Theft Auto 5">
+        <h3>Grand Theft Auto 5</h3>
+        <p><span class="original-price">PKR 4550</span><span class="discount-price">3000</span></p>
+      </div>
+      <div class="catalog-item">
+        <img src="https://i0.wp.com/xboxera.com/wp-content/uploads/2021/07/The-Witcher-3.jpeg?resize=1536%2C864&ssl=1" alt="The Witcher 3">
+        <h3>The Witcher 3</h3>
+        <p><span class="original-price">PKR 2850</span><span class="discount-price">2450</span></p>
+      </div>
+      <div class="catalog-item">
+        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202306/0915/33a2bc694cae0b6ea1210602a36360427af8486f3b10c0d4.jpg" alt="Batman Arkham Knight">
+        <h3>Batman: Arkham Knight</h3>
+        <p><span class="original-price">PKR 2000</span><span class="discount-price">1500</span></p>
+      </div>
+      <div class="catalog-item">
+        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202111/0907/nnsJwx47UkQyMSqOHIkBCQIm.jpg" alt="Tekken 7">
+        <h3>Tekken 7</h3>
+        <p><span class="original-price">PKR 2950</span><span class="discount-price">2500</span></p>
+      </div>
+      <div class="catalog-item">
+        <img src="https://p325k7wa.twic.pics/high/tekken/tekken-7/04-retailers/t7-definitive-edition.jpg?twic=v1/resize=760/step=10/quality=80" alt="Tekken 7: Definitive Edition">
+        <h3>Tekken 7: Definitive</h3>
+        <p><span class="original-price">PKR 5000</span><span class="discount-price">4500</span></p>
+      </div>
+    </div>
+
+    <!-- Additional hidden sections for other buttons -->
+    <div class="dynamic-section" id="xbox" style="display: none;"><p>Xbox section coming soon...</p></div>
+    <div class="dynamic-section" id="giftcards" style="display: none;"><p>Gift Cards section coming soon...</p></div>
+    <div class="dynamic-section" id="gamepasses" style="display: none;"><p>Game Passes section coming soon...</p></div>
+    <div class="dynamic-section" id="zee" style="display: none;"><p>Zee Bundle section coming soon...</p></div>
+  </section>
 </main>
 <footer>
-    <p>📞 Contact: +92322 400990  | 📸 Instagram: @gameover_14</p>
+  <p>📞 Contact: +92322 400990 | 📸 Instagram: @gameover_14</p>
 </footer>
 </body>
 </html>
