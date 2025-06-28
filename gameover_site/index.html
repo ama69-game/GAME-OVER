@@ -6,26 +6,143 @@
     <title>GAME OVER</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0e0e0e;
+            color: #f0f0f0;
+        }
+
+        header {
+            background: linear-gradient(90deg, #001f3f, #004080);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #00eaff;
+            letter-spacing: 2px;
+        }
+
+        marquee {
+            color: #ffffff;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        main {
+            display: flex;
+            min-height: 80vh;
+            background: linear-gradient(to right, #0e0e0e, #1a1a1a);
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #141414;
+            padding: 25px;
+            border-right: 2px solid #222;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar button {
+            background: #00264d;
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 1em;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .sidebar button:hover {
+            background: #0059b3;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 30px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .about {
+            margin-bottom: 40px;
+            background-color: #1f1f1f;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .about h2 {
+            color: #00eaff;
+        }
+
+        .catalog-item {
+            background: #262626;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .catalog-item h3 {
+            margin: 0 0 10px;
+            color: #00eaff;
+        }
+
+        .price-line {
+            color: red;
+            text-decoration: line-through;
+        }
+
+        .discount {
+            color: #00ff99;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        footer {
+            background: #001f3f;
+            text-align: center;
+            padding: 25px;
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">🎮 GAME OVER</div>
-        <marquee behavior="scroll" direction="left">We are not gone, we're just leveling up! Upto 50% OFF. BUY NOW. Best offers 💙</marquee>
+        <marquee behavior="scroll" direction="left">We are not gone, we're just leveling up! 💙</marquee>
     </header>
 
     <main>
         <aside class="sidebar">
-            <button onclick="showCatalog('playstation')">PlayStation</button>
-            <button onclick="showCatalog('xbox')">Xbox</button>
-            <button onclick="showCatalog('giftcards')">Gift Cards</button>
-            <button onclick="showCatalog('gamepasses')">Game Passes</button>
-            <button onclick="showCatalog('zeebundle')">Game Bundles</button>
+            <button onclick="showCatalog('playstation')">🎮 PlayStation</button>
+            <button onclick="showCatalog('xbox')">🟩 Xbox</button>
+            <button onclick="showCatalog('giftcards')">🎁 Gift Cards</button>
+            <button onclick="showCatalog('gamepasses')">🕹️ Game Passes</button>
+            <button onclick="showCatalog('zeebundle')">📺 Zee Bundle</button>
         </aside>
 
         <section class="content">
             <div class="about">
                 <h2>About Us</h2>
-                <p>We deal in premium games, consoles, and digital bundles. At GAME OVER, we bring you the best in gaming at unbeatable prices.  We’re not just a store; we’re a community of gamers dedicated to bringing you the best deals, the hottest titles, and the most epic bundles out there. Whether you’re a PlayStation warrior, an Xbox champion, a PC strategist, or just someone who loves great gaming value — we’ve got something for you.<br><br>
+                <p>Welcome to <strong>GAME OVER</strong> — your ultimate online destination for premium games, consoles, and digital bundles! 🎮💥<br><br>
+
+                We’re not just a store; we’re a community of gamers dedicated to bringing you the best deals, the hottest titles, and the most epic bundles out there. Whether you’re a PlayStation warrior, an Xbox champion, a PC strategist, or just someone who loves great gaming value — we’ve got something for you.<br><br>
 
                 Our mission is simple: make gaming more accessible, affordable, and exciting for everyone. That means trusted digital products, 24/7 support, blazing-fast delivery, and unbeatable prices — all under one roof.<br><br>
 
@@ -38,8 +155,8 @@
     <footer>
         <div class="footer-content">
             <p>📍 Visit Our Office</p>
-            <p>📞 Contact Us: aam.go.gameover@gmail.com</p>
-            <p>📌 Location: Askri 1 Lahore Pakistan</p>
+            <p>📞 Contact Us: gameover@example.com</p>
+            <p>📌 Location: Gaming Street, Game City</p>
         </div>
     </footer>
 </body>
