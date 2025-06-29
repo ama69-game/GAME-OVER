@@ -115,12 +115,13 @@
     }
 
   <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll('.dynamic-section');
-      sections.forEach(section => section.style.display = 'none');
-      document.getElementById(sectionId).style.display = 'block';
-    }
-  </script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.dynamic-section');
+    sections.forEach(section => section.style.display = 'none');
+    const section = document.getElementById(sectionId);
+    if (section) section.style.display = 'grid';
+  }
+</script>
 </head>
 <body>
 <header>
@@ -149,30 +150,12 @@
     <h3>Hogwarts Legacy</h3>
     <p><span class="original-price">PKR 5450</span><span class="discount-price">4950</span></p>
   </div>
-  <div class="catalog-item">
-    <img src="https://i.imgur.com/qTRo1EY.jpg" alt="Resident Evil 4">
-    <h3>Resident Evil 4</h3>
-    <p><span class="original-price">PKR 5800</span><span class="discount-price">5200</span></p>
-  </div>
-  <div class="catalog-item">
-    <img src="https://i.imgur.com/yrM3BFZ.jpg" alt="Resident Evil Village">
-    <h3>Resident Evil Village</h3>
-    <p><span class="original-price">PKR 4350</span><span class="discount-price">3950</span></p>
-  </div>
-  <div class="catalog-item">
-    <img src="https://i.imgur.com/xqu4JS9.jpg" alt="Resident Evil Triple Pack">
-    <h3>Resident Evil Triple Pack</h3>
-    <p><span class="original-price">PKR 4550</span><span class="discount-price">4050</span></p>
-  </div>
+  
+  
+  
 </div>
   </div>
-  <div class="slide">
-        <div class="catalog-item">
-          <img src="https://i.imgur.com/qTRo1EY.jpg" alt="Resident Evil 4">
-          <h3>Resident Evil 4</h3>
-          <p><span class="original-price">PKR 5800</span><span class="discount-price">5200</span></p>
-        </div>
-      </div>
+  
       <div class="slide">
         <div class="catalog-item">
           <img src="https://i.imgur.com/yrM3BFZ.jpg" alt="Resident Evil Village">
