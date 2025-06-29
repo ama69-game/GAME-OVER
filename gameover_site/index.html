@@ -114,7 +114,6 @@
       gap: 20px;
     }
 
-  </style>
   <script>
   function showSection(sectionId) {
     const sections = document.querySelectorAll('.dynamic-section');
@@ -126,28 +125,44 @@
 </head>
 <body>
 <header>
-  <div class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAACUCAMAAABV5TcGAAABfVBMVEUAAAAAAAPr3Rrq2xwAAwDt2x3p3xw1BBdcRBLdAE4FAAC1DUvBgB4AAAbnAF7z5xv+5SOFDjfp4xvLDFPiAFeSYRjtpCPlwCXcFktiByX43Si0FkrRqiSiFEPx4yBeQBHo5xReCyfuryveIUjqsyuVXRflcTGRCjngSjHhVjLIlyTtAF1OFQnRliLtnyvfZC09BglIHQscAAC0jibOniHwxCLrkCpqOhdqMRbJvivsyR06KQvkuScYDASGPxtsRAzfSj83DAQ1GQpwOBH+2Ce1ci6RThp6VxI1AActAABXNRLfah3OeyNzDTBHJBOEVQavchsrGA1eLxx5MAy0miquei6kgCFIKw2AViHDfy/ZS03PYETmfDGlQTjcCGGZcRI6KBqFaSJfYB9pABy/UC3bLzyBGCfTlTeRQhGkUBa2Yy6LLyqaLh5jHg+LMBqYADGhLjXjiD60ThiyADjIZyGoSCZ6NClpRC98EEDtckjILyqeBky9SDdLCSRZFB07XuHdAAAUQElEQVR4nO1ci1/bSJLWqwWWERbCYEfYsjEmBBsbYvzgFPF2zGPHDCSbQPY4Mrk5JpPszuR2k9xlJsn+7VdVLdmygWTut3eD7n76EvxotVruT9XVVV3VEoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoT/7xAFxf8AUIKHlCufREETArWvA1VVlJsOhxga/nhdHKJD83sMXxT+xe+drvcO6oKI3Gg9fvwmRRHqKPCuiaJIJdpAFZEQUroUZEHs3Wr8pGniNbce+wAvin9MR3L4ZzFYCysCxRpvF9sS/VNErw16gTo3CtitQbu+2PuheJv5177A9Pum93gQrxAoBlq5AaGUkKPOt1PHx8djx8dT851OZ3e3tbbbank90ZGO+63W7sZGi2Nb9AeOIpy0WmuEU0FDceDtra09wrLWCdQ48ms8fvx4Y6Pz8LhUyvyThz+e3laXb4ICPdtMSZJtMtuWJGYhGPxz+XERBoOiP23zAwCpndN9OVGEXIrRkfYq1PT0Q+2PFpapVuYQGH1i9E7FluFKtqrCm4QXK+F4Cxs2U6rkQyVIZr7YOwx9emqpWIVhN6wccSSQHths2HhAZaukckQ8ksvYpmlKppo5hN4eG17jMmMy/UFT8IZf5NJXBtPvDRF1wnEbfjFDFlT+0xlTe3SInA5TpQrQD6vFJ2acj4Sca8t0xip1TBG1mnZUkpipypLpbkKlY0OSe1xLAYCMsMpt9v0a6Dujo6NPHOimM4SCrztye3u5VQuYwFImS9b86GjuAc1HRIeE3WWl3OjoKcynh2dnZxkJRAP+XCBOeGZI3tBwHGvwEg3nZcikQ9tznVTDkli7eW8L8Sf4W0T8szcziC/b8Msl03QWt7bOHaAllXLcKTrq0YFwUo5zfCKsP2vAYRoQkplBOh6SdMiSvUjt3gNsccD7v4SNjqk29keWnMVxRBn/4CVZjvNfqgsVw1RtSc430uXklmNiRxPsucDVR86ls6HDqmmsAh0vDdtmkozDAqVDFOYNzpeRvignCeM9lLO32/sBUH/OHNQaoBnu4i+NxegF3+J+tYqN844JdIwnFx0TOg7kzXtN5BqSjIABIRur64I2BsLAcPTASaA7iA6iy5i74GxcXPgfkhcLt9Pz6wAmwd7m2XOHwahmrD02e2cAs9CV7846L/41Y8hOAVD5/k7336qFQgO6atWfPn2+A1oY2PQVpWyUWqdLJYOoQEKQDoFLBxBi/TB0AbzGyG2T0APowSnUZxazGzisN65UEMTtMRfnRuacX6bn5oDAH+Yu55YdGBhQ2v4WzAyYaCVvMoIpmJQt0QFfZTuFM8u8wZVtuyaQldNz7JRQuXiKCBYS/Gz44cVLkNw7XinXbdygymUYzq2SOT2XLI+DHrkzmUxeMhWsKdW0psAn6dGBrIGBBfYGNQljymSlIxHtDl7BqnlukUJGvyjc6B3cCuDe7KImQNFfLMeSC0hFz7xCF0sR1jKMjIVEAemAM2Yny+OXliqD+lAbLXDBzjgdoDxU0kBAhIlvKphhVukUxttL0h2gbvS+G0cvYbNHv3tioQ1lm1ZnttuFYby+trv744+vXr1+CNiFX32WskESZNXM/LnbvQM3cwQq/sUiC0pC6YCZRcW+ynJxuuDieHELhSLwBeqZ+YOF5lnV+unBg9M1cFsenz4gnIRqRQQGyyYYV3hXrT1edFRy3YaPCkylpxlmmrZk2mBu9/C4raqgUTw6UiqqUps1713eK9gqq15eblUZmLBAQV+VIlFF13WLRXzlONbCRAfc/I5FVrPa3uPy23LQvQKhN+2EPQZlhxmLLEqgQ+wtTfzcyMMAklVrCkr20C5DnMeSsSoIRTU9HvsreScw0aIZNkW6AwTI9oBXgNfEWJhUR5AOa4+v02zD2EC/BUvtIpatWpJHhyD4zuealWd0FlqmIB2oRSVOBzD5TewiXUUFInt0PPFUKc3Htt1zWezjsNLR9ujYcS1Qgir5GLYL3a/VyV8FOlr3fRxtOCb4o0iHBuOtQXQw9qzbfVMAGs7ffJiocEq53THl0SFxB78HI1x0aH06HLQeNU04eX337nnRxNUIWXWBH58OyUq5GdfNEIoWOvREB1il6LOgdKwKwj7MQ/a7FUEYY6Rf+2YYqZfF5cXluwH8HCo6hCE64H9tJpmca9pohstSEaWjZPmynQBB9+6rxMDlu0qHCHQwqQLW1iqDqUUK0IFsWOlYcjwZQPe2CRiEKO5acN9Ab1p7uAYMej5eLqereYYOWAJ1x36deUsUNi5gYB8l1JIWuqw0WILSsZSxLbte04EOmdYz+HpHwsSFHsmaA9ew7APct4nbJmAQIB2O0TZIKdZOTlBAZicmJiq2hQ6Zjcs/2z4dYG5aoAYTtp2AbmLvVKnN7Q6JaAI69FoGqtVrpIBVrnGA5IItWaRq3kwM4nOofHvQFT8vLi43wTI1nJTTmOI29HrBIGWqonQc1fnKjVq8+8vyMh/5y02GZpiqEh2bDTLQabDUXp83m6/htFWGww3UTw6Ebt5QSXcYw+5aiGwOgSzCffDkt4owtZpgfIKdoeuivl5PmJI/WA4y3lCppsu9MX9p5U2cjomOs4ZE7OFgUWZgsp0RBJ8Omp7BSFdpInIOdM/6H3CLQoQR6NyWa/KZdYyXaSXQmOiSIB1anXFzAXwWH+OXDRMHi9qehw7tOejUAB1PgY54GZdJRBEHC0kHqtJjg2xYtb3iB6RCGGoiWa0tLCx8aoCFiF78GDcrHtVt8trIDNNKSIcKX/59wcfHvzie7pjXcCWdkZ4AOkSlm32zAPNFDc9CZwgGCy7/qLQ+ZC3dv7/kYRuxsr+/fXLbLARAN2kNxvs0LlC4dUKFIgXAQAF8lqOMjT2RBnyWRxYZXhLDmWXU5evj3ko6YadkobpQkQ5cK4XBglZIqV7xUUKMvXu3+uJ37/RXcCcN+sOB2YRxj4JhCAS7WIf+tVypT4cXjAUjHR1aWTJe8MACTjUDdMDMYsL4MRNuTqTFQUatsH74idsvjsNKt9TrG9FNlstbYHab3HdDRcLoI0y04oE3swxJB6oWSQYXTqc4C8VfVtGl8RhZZSYaJt5aqcV9PGwVDRDWi7OAsRu2sJMyspDNvm/nE/l83kQkEvAf/vJFTRf361gOSOX6+u/Uwqpq3pjSdD2XgsommCQUheNO3v26naDzUtxnoYbzJl0B2k6oJkc+L62GLChJ0efD6nQP1aaHv8LRg4fekbFDoR+QrkJhdbpa7cDZoHrO/4B4Lyi6t8B19Lc/gEKCGs0WzKadKrVRRUAph1/y+vZ6fj0wB2M/HouBRxHjEYVx+JDGGRMMtYUYx5ua4usOcSSN8QcovANUjrzFybdcTk4oSm8GnfDOersPNb73GvZa9948hCnO0sPIZBm7FHQpyuVJnIuz2FP4nhX9NA9BqV3AcSgcx8XmkTgdLyc/9JvTsxi+So6XJz/Dt67f7vggkhjcClGcpY+RiWw2OzOA+MwHpONDnH8Nep81XiEex86OLNDH+MxsoEaXtxBfGAEGZ+NUwXsdQjdkpvoXoASt6P+ORR1IrvtqZ8O0WjoA5dqv1/1cnsD0pX4o3mGNEuaUGyxzUfhartTtQMP/X7xNwYNiP18sUDzEm98kvt/YcvgkA+4apj1iepOmUTLTcFbktdCG3m/smtY/FBQRRQihRytQHqTm5X7y36t5rPCCr/xm7atd4jX6TfZI175+7i3gyo/SEb91RH+xR1qfWe3LheHBkIYb+HrDDewXa/736zDQ6vBlvJSz8EGr1XYA29vbB7UeeF9g5NSgUNPBN/lHLyP62YbU7m9IwP294d2/nc6rbwDvAK9eveoAfnz/vrWOh0RxZ+Nvrzrf7u3tja73T8TkOsIOtHCSG70ZhycgQLx6Lnf4H63c5ubmbgdeNnNw2pEmDgvnLYImS1HMFRsO/Osj1SgUxr7DnGpBrI1hieO064f9u9lJOSlEYx5k5rDOv1wHp47LP50GfnbdYrXYD4i7bqrxEFT4Py52/1OgrFhd28PkN/DXbS98qoLfbT1fFxUNCKmVbMwFUxO0/OOduGbZFEXhcZYUriNTPqrqA3PJoDU14eWG4WdbwjdGlXiw1jjWxN+ss//3gcu4MI9MOaqkyqrKvBQvEzv69ISkGOgwqAN2kI6fLB7X7ud3UP4GkcqZYcQNs1M5GCy4GsYo5E/pyQSMe1oPveWFkEAT109Pl+YdUzZZP+WcWXDr6rnT0x2QHR6UxBDBaVA6eK+9KJxJd1u2nP6Iw4wzbMrldMi4EibL/Xi1hcEs45ul+3CRsEARhVbKcVIWdOWbxeUeCrZqOjjwcU9GycIUQGbVjwbpCAQlaVVRlZv3BrAILS4uLtFgQdGBiyzeW/SxDDIlgU5xx26VggHgMmae+tK+1w8kx5oJuoP5oqCLXsiaDayVbvR1R2+wSDwtdSAknUwu1AThP4sGSINstZvpi3E/x3auoDIclUaI1koD6S73knz9B9dxmgla9bY5HaRS5AE61ixMKlb9CL6Ji8EyO0cu+nTQmk8c45CYoq9C3530RT+QVzAZJkWwUNLRfjUx0e3yQHK3nqBMOApK1lYpJjBAhzhFcQdVcnDp+KyBmxhkmT2vjcwGgM117yAdqDuALtX64cNEl8onun/O2LSmboUosNCjQ/JT5RBKxqakWYrg79RRd3A6fKt7fR6kA+NwGKPV9xyV0/H0Jp8WpMMizgMmxgOkg4WXDrHnYqxnEhKG2TAoKZ5kKIAmSZnALq0lbj1QyFrMpWy+52dV4DsBe0CrF6ZRfd6iZDrTwHVkzxQ+BM5DS4eXKsexXkioDGYOokMrBcNOIne7UHf4E6042oDOyhSjFYbdEFw5AcMWg5LAXmNf6LmIhxjsDB0duzzVieeVel1ZryTQkFIxgq/36WitrGyvgzLZX9nfsCiC5qXKOSaPOD5ZWloJYpsvI4kwWHhKsrXPN9bVHi39tJuhTEspTEHJHh3SAB31BKb38KAkzCzecHIzmQr0Z7REqXKqRwemu5gqadtGPRNAPVM58BYA5g3a9SbBYMG1JnGpUi8WKZFfDhkdZyT2Q9Lh04E7Jbcpc5CneCQwQeOFY5PFrfpm2FmDG6WofH23hz4Xat5lnhhc8zoHqEo04VHbpu0NuDfQCtFeONQd10oH5q9wOmo0WEhTyJivIr5wiCpMGFKdjo7Sofb2++F2BRw4uO/LBDpoOzvf3oPpLjUdk/TFNceWyLKRwHMJlXQEVOkV3cHpqBt8d6NqMwmlYw/3RjHWyyvlg4VqqGDc86i3iR/dfaRDFAN0YIO6sOKq6LTAaZYUJukQBu2O4GDB/ErUHdrDZrWACS2YjWAVcDMC3xPqNM/PmxsiZh3THhBmTTeHQIOF6OC7wwzMc2k2KxWQJ7mINSixLkSYv25mKSRo+Ju0j3YBnJhzyo4CQjAZgbsrprMVS45jpBIGC20DdH/FcHQgOD3ZvwjXtXLCS9HHfYjLUAEdpGyYYi0PPTramIcRkA7Ucz4d5fJ5gqeOckmiXX8m+wV8MQxZbzYwXwiawALPQcO38iR/yAXXHRyeisGtPr+MX3g7JUPjswi+KsUU/QAdtJHUo2M2m82+s21G+zh8tWrZtvMODqBHAnSAtwoeybuF7AAWeJhOFF4muN8jA2+2t63SeYdBbajVDQ8doErZNXRUeoNF5Nv3XlWrzQJKvJfGZFWb1WYHZ02F0wEWhCqv4lNPrjwJRkGfRab5xq42mwWH2JBZsVKq7IIdH57FMOjtxnXSUUjQap9ZB02qYLz5TTo9d95W+fMIAI1fY+n091hX8bKOGX8kwfWxAso6RlV6GUtvuf6uW4tZtNspNHSIurDBMEFWxplFwQeLUBJ23eS5g66/mXGiXI7dxU2EjFIGTeuyXO5tN8h5D3cAnwVzlnlSMcbxRN/FATpwA4Rkpcvjf3JNCXczoPYFOkK0cox0dOx8Hm6Xam0GyisJMKTy+YTrrwbOzmTf3rXyibwJ1oKZzxufsh+zPLsFFwe5GYZJ2FeB/UXpwNFkvc1+/JTKq5RmClc1jqlKeMRD2KhOT7vMBGuoMubjWcFQzQZmsgVEf+Q92AgF6INVgAOH/QfciC3Xkw4nUxobxhQuC8DMgsv0DHwWYQ1T5WjNAMSlmKlXOlpYBASHQTqdvufkVXBIejDQXjyfS6ffCH4mPXgaE2AjbMFYcbfApPjMn50kIKObrs1nUdU07EAz0JDNs46JDnByDPBZZt/GYpcNE3PaZVAfphEiI10RZsGquHRN2vopM8+Bga92M1Yu+48koJyoiWR5/DIhmY1LsBb2FT9aTYOFTAmZmyVyH0BBf/MXOMa4/PN5cvwi3ZDo4S5ISZjWOwThYCYe/9TI500bt4qa3GjEj5W38fiCP6yx5934TPzXhJ1ofIrH4/u90CpG4aC+iaaYnTftIMCDSXE6+G5RY19XPmfjH9+2Da9G3g7T0jGu3+n6brU4APBLCsWxI30wmUGDqrvThUKlJWq1QLnYatIZYFNMF4ZQLLw8BEp3/QMHaJlo+kE1UOdZmOhArLydu4o3tSv1FOHvcODt34cL06Bm0nOgUdJ4YroPrL1CNTx40jaS9qsFFFRoMJvkG/XG+wm25XIWn6Yw9FQ84TMcmJwdPBu0AZ2dpPPGg6m0ZUqzFYVZr7TMH8yAWbr9eh9DRofyOT45hLczM91h6cAMlc9wLP55KIdpJDt8egDg1fDTCIL3NL+PgRofQpYSpWgj16A2/HQNfF4i1RzMihSFa0/vQQMjv1cDmqCHSQ1cKDRW2BchDt80zQ8aDTx2QwzkSV6PQG3a8hCusREhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESL838B/AQFWvZxA3MI8AAAAAElFTkSuQmCC" alt="Game Over Logo"></div>
+  <div class="logo"><img src="your-logo-url-here.png" alt="Game Over Logo"></div>
   <marquee>Level Up with the Best Digital Deals — Valid Till 2 July 🕹️🔥</marquee>
 </header>
 <main>
   <aside class="sidebar">
-    <button onclick="showSection('playstation')">🎮 PlayStation</button>
-    <button onclick="showSection('xbox')">🟩 Xbox</button>
-    <button onclick="showSection('giftcards')">🎁 Gift Cards</button>
-    <button onclick="showSection('gamepasses')">🕹️ Game Passes</button>
-    <button onclick="showSection('zee')">📺 Zee Bundle</button>
+    <button onclick="showSection('playstation')">🎮 <img src='https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg' alt='PlayStation' style='height: 20px; vertical-align: middle;'> PlayStation</button>
+    <button onclick="showSection('xbox')">🟩 <img src='https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox_one_logo.svg' alt='Xbox' style='height: 20px; vertical-align: middle;'> Xbox</button>
+    <button onclick="showSection('giftcards')">🎁 <img src='https://upload.wikimedia.org/wikipedia/commons/e/e0/Gift_Card_icon.svg' alt='Gift Cards' style='height: 20px; vertical-align: middle;'> Gift Cards</button>
+    <button onclick="showSection('gamepasses')">🕹️ <img src='https://upload.wikimedia.org/wikipedia/commons/9/9f/Xbox_Game_Pass_logo.svg' alt='Game Passes' style='height: 20px; vertical-align: middle;'> Game Passes</button>
+    <button onclick="showSection('zee')">📺 <img src='https://upload.wikimedia.org/wikipedia/commons/d/d8/Zee5_logo.svg' alt='Zee' style='height: 20px; vertical-align: middle;'> Zee Bundle</button>
   </aside>
   <section class="content">
     <div class="about">
-      <h2>About Us</h2>
-      <p>Welcome to <strong>GAME OVER</strong> — your ultimate digital marketplace for PlayStation and Xbox games. We offer authentic, affordable game keys and digital bundles straight to your console. 🎮💥<br><br>
-      Trusted by hundreds of gamers. Powered by passion. It's never really GAME OVER.</p>
+  <h2>Meet the Founders</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-around; margin-bottom: 30px;">
+    <div style="text-align: center;">
+      <h3>🎮 Arham</h3>
+      <p style="font-style: italic;">"Leading with strategy, building with vision."</p>
     </div>
+    <div style="text-align: center;">
+      <h3>🕹️ Mumha</h3>
+      <p style="font-style: italic;">"Fueling passion, mastering precision."</p>
+    </div>
+    <div style="text-align: center;">
+      <h3>🛡️ Ahmed</h3>
+      <p style="font-style: italic;">"Defending trust, empowering community."</p>
+    </div>
+  </div>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+    Together, we are <strong>GAME OVER</strong> — not just a digital game store, but a movement powered by gamers, for gamers. Our mission is to offer a trusted, exciting, and seamless experience to every player who joins our world. 🚀<br><br>
+    <strong>“Gaming is not just a hobby; it’s a legacy we build with every click, every deal, and every smile.”</strong>
+  </p>
+</div>
 
     <!-- Real Slideshow -->
     <div class="catalog-grid dynamic-section" id="slideshow">
   <div class="catalog-item">
-    <img src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70010000014724/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2" alt="Hogwarts Legacy">
+    <img src="https://i.imgur.com/Z4ErSVT.jpg" alt="Hogwarts Legacy">
     <h3>Hogwarts Legacy</h3>
     <p><span class="original-price">PKR 5450</span><span class="discount-price">4950</span></p>
   </div>
@@ -157,34 +172,35 @@
 </div>
   </div>
   
+      <div class="slide">
         <div class="catalog-item">
-          <img src="https://i0.wp.com/xboxera.com/wp-content/uploads/2021/07/The-Witcher-3.jpeg?resize=1536%2C864&ssl=1" alt="Witcher 3">
-          <h3>Witcher 3/h3>
+          <img src="https://i.imgur.com/yrM3BFZ.jpg" alt="Resident Evil Village">
+          <h3>Resident Evil Village</h3>
           <p><span class="original-price">PKR 4350</span><span class="discount-price">3950</span></p>
         </div>
       </div>
       <div class="slide">
         <div class="catalog-item">
-          <img src="" alt="Resident Evil Triple Pack">
+          <img src="https://i.imgur.com/xqu4JS9.jpg" alt="Resident Evil Triple Pack">
           <h3>Resident Evil Triple Pack</h3>
           <p><span class="original-price">PKR 4550</span><span class="discount-price">4050</span></p>
         </div>
       </div>
     </div>
       <div class="catalog-item">
-        <img src="https://d1w82usnq70pt2.cloudfront.net/wp-content/uploads/2023/05/fe7f67dc-944e-4ed1-9afa-5da3f6bfaf97-696x392.jpeg" alt="Resident Evil 4">
+        <img src="https://i.imgur.com/qTRo1EY.jpg" alt="Resident Evil 4">
         <h3>Resident Evil 4</h3>
         <p><span class="original-price">PKR 5800</span><span class="discount-price">5200</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/05/resident-evil-village-1.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5" alt="Resident Evil Village">
+        <img src="https://i.imgur.com/yrM3BFZ.jpg" alt="Resident Evil Village">
         <h3>Resident Evil Village</h3>
         <p><span class="original-price">PKR 4350</span><span class="discount-price">3950</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/01/grand-theft-auto-5-feature.jpg" alt="Resident Evil Triple Pack">
-        <h3>Grand Theft Auto 5</h3>
-        <p><span class="original-price">PKR 4550</span><span class="discount-price">3000</span></p>
+        <img src="https://i.imgur.com/xqu4JS9.jpg" alt="Resident Evil Triple Pack">
+        <h3>Resident Evil Triple Pack</h3>
+        <p><span class="original-price">PKR 4550</span><span class="discount-price">4050</span></p>
       </div>
     </div>
 
@@ -192,42 +208,42 @@
     <div class="catalog-grid dynamic-section" id="playstation" style="display: none; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
       <!-- Same games duplicated for PlayStation section -->
       <div class="catalog-item">
-        <img src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70010000014724/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2" alt="Hogwarts Legacy">
+        <img src="https://i.imgur.com/Z4ErSVT.jpg" alt="Hogwarts Legacy">
         <h3>Hogwarts Legacy</h3>
         <p><span class="original-price">PKR 5450</span><span class="discount-price">4950</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://d1w82usnq70pt2.cloudfront.net/wp-content/uploads/2023/05/fe7f67dc-944e-4ed1-9afa-5da3f6bfaf97-696x392.jpeg" alt="Resident Evil 4">
+        <img src="https://i.imgur.com/qTRo1EY.jpg" alt="Resident Evil 4">
         <h3>Resident Evil 4</h3>
         <p><span class="original-price">PKR 5800</span><span class="discount-price">5200</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/05/resident-evil-village-1.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5" alt="Resident Evil Village">
+        <img src="https://i.imgur.com/yrM3BFZ.jpg" alt="Resident Evil Village">
         <h3>Resident Evil Village</h3>
         <p><span class="original-price">PKR 4350</span><span class="discount-price">3950</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/01/grand-theft-auto-5-feature.jpg" alt="Resident Evil Triple Pack">
-        <h3>Grand Theft Auto 5</h3>
+        <img src="https://i.imgur.com/xqu4JS9.jpg" alt="Resident Evil Triple Pack">
+        <h3>Resident Evil Triple Pack</h3>
         <p><span class="original-price">PKR 4550</span><span class="discount-price">4050</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://i0.wp.com/xboxera.com/wp-content/uploads/2021/07/The-Witcher-3.jpeg?resize=1536%2C864&ssl=1" alt="The Witcher 3">
+        <img src="https://i.imgur.com/UxnUv7H.jpg" alt="The Witcher 3">
         <h3>The Witcher 3</h3>
         <p><span class="original-price">PKR 2850</span><span class="discount-price">2450</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202306/0915/33a2bc694cae0b6ea1210602a36360427af8486f3b10c0d4.jpg" alt="Batman Arkham Knight">
+        <img src="https://i.imgur.com/ALSl1cd.jpg" alt="Batman Arkham Knight">
         <h3>Batman: Arkham Knight</h3>
         <p><span class="original-price">PKR 2000</span><span class="discount-price">1500</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202111/0907/nnsJwx47UkQyMSqOHIkBCQIm.jpg" alt="Tekken 7">
+        <img src="https://i.imgur.com/NnRbjix.jpg" alt="Tekken 7">
         <h3>Tekken 7</h3>
         <p><span class="original-price">PKR 2950</span><span class="discount-price">2500</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://p325k7wa.twic.pics/high/tekken/tekken-7/04-retailers/t7-definitive-edition.jpg?twic=v1/resize=760/step=10/quality=80" alt="Tekken 7: Definitive Edition">
+        <img src="https://i.imgur.com/3s0sEMa.jpg" alt="Tekken 7: Definitive Edition">
         <h3>Tekken 7: Definitive</h3>
         <p><span class="original-price">PKR 5000</span><span class="discount-price">4500</span></p>
       </div>
