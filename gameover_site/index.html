@@ -91,8 +91,29 @@
       text-align: center;
       padding: 25px;
       color: #ffffff;
-     }
-  </style>
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+    .slide {
+      display: none;
+      text-align: center;
+    }
+    .slide.active {
+      display: block;
+    }
+    .slideshow-container .catalog-item {
+      width: 300px;
+      margin: 0 auto;
+    }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
   <script>
     function showSection(sectionId) {
       const sections = document.querySelectorAll('.dynamic-section');
@@ -103,7 +124,7 @@
 </head>
 <body>
 <header>
-  <div class="logo"><img src="https://media.istockphoto.com/id/1325433246/video/game-over-text-animation-with-alpha-channel-4k.jpg?s=640x640&k=20&c=aZM_cNmjuXVVkLm12evzXTU0qFhAu3Vh2_2W_h-eq3c=" alt="Game Over Logo"></div>
+  <div class="logo"><img src="your-logo-url-here.png" alt="Game Over Logo"></div>
   <marquee>Level Up with the Best Digital Deals — Valid Till 2 July 🕹️🔥</marquee>
 </header>
 <main>
@@ -121,25 +142,49 @@
       Trusted by hundreds of gamers. Powered by passion. It's never really GAME OVER.</p>
     </div>
 
-    <!-- Slideshow Style Front Page -->
-       <div class="catalog-grid dynamic-section" id="slideshow">
+    <!-- Real Slideshow -->
+    <div class="slideshow-container dynamic-section" id="slideshow">
+  <div class="slide active">
+    <div class="catalog-item">
+      <img src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70010000014724/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2" alt="Hogwarts Legacy">
+      <h3>Hogwarts Legacy</h3>
+      <p><span class="original-price">PKR 5450</span><span class="discount-price">4950</span></p>
+    </div>
+  </div>
+  <div class="slide">
         <div class="catalog-item">
-        <img src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70010000014724/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2" alt="Hogwarts Legacy">
-        <h3>Hogwarts Legacy</h3>
-        <p><span class="original-price">PKR 5450</span><span class="discount-price">4950</span></p>
+          <img src="https://d1w82usnq70pt2.cloudfront.net/wp-content/uploads/2023/05/fe7f67dc-944e-4ed1-9afa-5da3f6bfaf97-696x392.jpeg" alt="Resident Evil 4">
+          <h3>Resident Evil 4</h3>
+          <p><span class="original-price">PKR 5800</span><span class="discount-price">5200</span></p>
+        </div>
       </div>
+      <div class="slide">
+        <div class="catalog-item">
+          <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/05/resident-evil-village-1.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5" alt="Resident Evil Village">
+          <h3>Resident Evil Village</h3>
+          <p><span class="original-price">PKR 4350</span><span class="discount-price">3950</span></p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="catalog-item">
+          <img src="https://i.imgur.com/xqu4JS9.jpg" alt="Resident Evil Triple Pack">
+          <h3>Resident Evil Triple Pack</h3>
+          <p><span class="original-price">PKR 4550</span><span class="discount-price">4050</span></p>
+        </div>
+      </div>
+    </div>
       <div class="catalog-item">
-        <img src="https://d1w82usnq70pt2.cloudfront.net/wp-content/uploads/2023/05/fe7f67dc-944e-4ed1-9afa-5da3f6bfaf97-696x392.jpeg" alt="Resident Evil 4">
+        <img src="https://i.imgur.com/qTRo1EY.jpg" alt="Resident Evil 4">
         <h3>Resident Evil 4</h3>
         <p><span class="original-price">PKR 5800</span><span class="discount-price">5200</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/05/resident-evil-village-1.jpg" alt="Resident Evil Village">
+        <img src="https://i.imgur.com/yrM3BFZ.jpg" alt="Resident Evil Village">
         <h3>Resident Evil Village</h3>
         <p><span class="original-price">PKR 4350</span><span class="discount-price">3950</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/01/grand-theft-auto-5-feature.jpg" alt="Grand Theft Auto 5">
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/01/grand-theft-auto-5-feature.jpg" alt="Resident Evil Triple Pack">
         <h3>Grand Theft Auto 5</h3>
         <p><span class="original-price">PKR 4550</span><span class="discount-price">3000</span></p>
       </div>
@@ -159,14 +204,14 @@
         <p><span class="original-price">PKR 5800</span><span class="discount-price">5200</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/05/resident-evil-village-1.jpg" alt="Resident Evil Village">
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/05/resident-evil-village-1.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5" alt="Resident Evil Village">
         <h3>Resident Evil Village</h3>
         <p><span class="original-price">PKR 4350</span><span class="discount-price">3950</span></p>
       </div>
       <div class="catalog-item">
-        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/01/grand-theft-auto-5-feature.jpg" alt="Grand Theft Auto 5">
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/01/grand-theft-auto-5-feature.jpg" alt="Resident Evil Triple Pack">
         <h3>Grand Theft Auto 5</h3>
-        <p><span class="original-price">PKR 4550</span><span class="discount-price">3000</span></p>
+        <p><span class="original-price">PKR 4550</span><span class="discount-price">4050</span></p>
       </div>
       <div class="catalog-item">
         <img src="https://i0.wp.com/xboxera.com/wp-content/uploads/2021/07/The-Witcher-3.jpeg?resize=1536%2C864&ssl=1" alt="The Witcher 3">
@@ -194,11 +239,32 @@
     <div class="dynamic-section" id="xbox" style="display: none;"><p>Xbox section coming soon...</p></div>
     <div class="dynamic-section" id="giftcards" style="display: none;"><p>Gift Cards section coming soon...</p></div>
     <div class="dynamic-section" id="gamepasses" style="display: none;"><p>Game Passes section coming soon...</p></div>
-    <div class="dynamic-section" id="zee" style="display: none;"><p>Zee Bundle section coming soon...</p></div>
+    <div class="dynamic-section" id="game" style="display: none;"><p>Game Bundle section coming soon...</p></div>
+      <!-- About Us Section at Bottom -->
+    <div class="about">
+      <h2>Meet the Founders</h2>
+      <p><strong>GAME OVER</strong> is proudly led by three passionate gaming entrepreneurs — <strong>Arham</strong>, <strong>Mumha</strong>, and <strong>Ahmed</strong>.</p>
+      <p>Together, we’ve built more than just a game shop — we’ve created a space for gamers to experience trust, authenticity, and unbeatable deals in the digital world. With each click, we aim to level up your experience. 🎮💙<br><br>
+      “We don’t just sell games — we sell joy, battles, victories, and endless adventures.”<br>
+      — The GAME OVER Team</p>
+    </div>
   </section>
 </main>
 <footer>
   <p>📞 Contact: +92322 400990 | 📸 Instagram: @gameover_14</p>
 </footer>
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('#slideshow .slide');
+
+  function showSlides() {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add('active');
+    setTimeout(showSlides, 3000);
+  }
+
+  showSlides();
+</script>
 </body>
 </html>
